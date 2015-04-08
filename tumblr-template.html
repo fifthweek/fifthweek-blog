@@ -1412,7 +1412,7 @@ ol.notes a:hover {
 
         {block:Photo}
 
-       {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" width="100%" />{LinkCloseTag}
+       {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="100%" />{LinkCloseTag}
 
       {block:Caption}
          <div class="caption">
@@ -1432,7 +1432,7 @@ ol.notes a:hover {
   {block:Photos}
     <div class="photo-data">
       <div class="pxu-photo">
-        <img alt="{PhotoAlt}" src="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" class="{block:Exif}exif-yes {/block:Exif}{block:Caption}caption-yes{/block:Caption}" {block:Exif}data-camera="{block:Camera}{Camera}{/block:Camera}" data-iso="{block:ISO}{ISO}{/block:ISO}" data-aperture="{block:Aperture}{Aperture}{/block:Aperture}" data-exposure="{block:Exposure}{Exposure}{/block:Exposure}" data-focal="{block:FocalLength}{FocalLength}{/block:FocalLength}"{/block:Exif} {block:Caption}data-caption="{Caption}"{/block:Caption}>
+        <img alt="{PhotoAlt}" src="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" class="{block:Exif}exif-yes {/block:Exif}{block:Caption}caption-yes{/block:Caption}" {block:Exif}data-camera="{block:Camera}{Camera}{/block:Camera}" data-iso="{block:ISO}{ISO}{/block:ISO}" data-aperture="{block:Aperture}{Aperture}{/block:Aperture}" data-exposure="{block:Exposure}{Exposure}{/block:Exposure}" data-focal="{block:FocalLength}{FocalLength}{/block:FocalLength}"{/block:Exif} {block:Caption}data-caption="{Caption}"{/block:Caption}>
       </div>
       <div class="icons">
         <a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}">
@@ -1453,7 +1453,7 @@ ol.notes a:hover {
 
         {block:Video}
     <div class="js-video vimeo widescreen">
-      {Video-500}
+      {Video-HighRes}
 </div>
       {block:Caption}
          <div class="caption">
@@ -1741,7 +1741,7 @@ ol.notes a:hover {
 
         {block:Photo}
 
-       {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" width="100%" />{LinkCloseTag}
+       {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" width="100%" />{LinkCloseTag}
 
       {block:Caption}
          <div class="caption">
@@ -1756,7 +1756,7 @@ ol.notes a:hover {
 
         {block:Photoset}
  
-      {Photoset-500}
+      {Photoset-HighRes}
 
      {block:Caption}
          <div class="caption">
@@ -1770,7 +1770,7 @@ ol.notes a:hover {
 
         {block:Video}
     <div class="js-video vimeo widescreen">
-      {Video-500}
+      {Video-HighRes}
 </div>
       {block:Caption}
          <div class="caption">
