@@ -13,14 +13,6 @@
 
     <title>Fifthweek Blog{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
     
-    
-        
-
-    <!--/////////////BUILT BY
-        /////////////NEVERBLAND.COM    
-        /////////////TRY OUT OUR THEMES AT THEMES.NEVERBLAND.COM
-  -->
-  
     <meta name="tumblr-theme" content="37034" />
 
     <meta name="author" content="{Title}">
@@ -37,14 +29,8 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
   
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
-
-
-  
-
     
     <!-- SET TUMBLR OPTIONS -->
-    
-    
     
     <!-- images -->
     <meta name="image:Header" content="http://static.tumblr.com/negrna7/55pmmhzap/holder.jpg"/>
@@ -69,7 +55,6 @@
     <meta name="text:Facebook Profile" content=""/>
     <meta name="text:Pintrest Profile" content=""/>
     <meta name="text:Disqus Shortname" content=""/>
-    
     
     <!-- fonts -->
     <meta name="font:Title" content="'Merriweather', sans-serif"/>
@@ -303,36 +288,27 @@ section {
 }
 
 header {
-  float: left;
-  clear: both;
   width: 100%;
   margin: auto;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   position: relative;
 }
 .thelargeheader {
-  border-top:8px solid #593e54;
-  height: 210px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    width: 100%;
+  height: 54px;
   width: 100%;
   background-color: {color:Header Background};
 }
 
-@media (max-width: 750px) {
-    .thelargeheader {
-        height: 370px;
-    }
+.thelargeheader-inner {
+    max-width: 692px;
+    margin: 0 auto;
+    padding:0 15px;
 }
 
-@media (max-width: 399px) {
-    .thelargeheader {
-        height: 355px;
-    }
-}
-
-@media screen and (min-width: 1150px) {
-  .thelargeheader {
-    height: 240px;
-  }
+.thelargesubheader {
+    background: #4d394b;
+    padding: 70px 15px;
 }
 
 #bgheader {
@@ -345,11 +321,10 @@ header {
 }
 
 h1 {
-    position: absolute;
-    top: 47px;
-    left: 40px;
+    margin-top:11px;
+    float:left;
     font-family: 'Merriweather', serif;
-    font-size:30px;
+    font-size:26px;
     line-height:36px;
     font-weight:900;
     letter-spacing: -2px;
@@ -357,30 +332,14 @@ h1 {
     -moz-osx-font-smoothing: grayscale;
 }
 h1 a {
-    opacity: 0.9;
-    color: #402d3c;
+    color: #555459;
 }
 h1 a:hover {
-    opacity: 1;
+    color: #3c3b3f;
     text-decoration:none;
 }
 h1 span {
     padding-top: 9px;
-}
-
-#logo-small {
-    display:inline-block;
-    background-color: #402d3c;
-    border-radius: 4px;
-    width:49px;
-    height:49px;
-    text-align: center;
-    margin:0;
-    color:#fff;
-}
-
-#logo-large {
-    display: none;
 }
 
 @media (min-width: 950px) {
@@ -390,27 +349,6 @@ h1 span {
         width:58px;
         height:58px;
         border-radius: 5px;
-    }
-}
-
-@media (min-width: 750px) and (max-width: 1150px) {
-    h1 {
-        top: 43px;
-    }
-}
-
-@media (max-width: 750px) {
-    h1 {
-        top: 35px;
-        left: 50%;
-        margin-left: -35px;
-    }
-    #logo-small {
-        font-size:40px;
-        line-height:60px;
-        width:70px;
-        height:70px;
-        border-radius: 6px;
     }
 }
 
@@ -448,12 +386,12 @@ h1 span {
 }
 
 #blogtitle h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 40px;
-  line-height: 40px;
-  padding: 35px 0 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 70px;
+  line-height: 70px;
+  padding: 0 0 20px 0;
   margin: 0 auto;
-  font-weight: 900;
+  font-weight: normal;
   font-style: normal;
   text-align: center;
   letter-spacing: -3px;
@@ -461,43 +399,36 @@ h1 span {
   -moz-osx-font-smoothing: grayscale;
 }
 #blogtitle h2 a {
-    color: {color:Heading Text};
+    color: #fff;
     text-decoration: none;
-}
-@media (min-width: 400px) {
-    #blogtitle h2 {
-        width:400px;
-        font-size: 48px;
-        line-height: 48px;
-    }
-}
-@media (min-width: 1150px) {
-  #blogtitle h2 {
-    font-size: 64px;
-    line-height: 64px;
-    width:500px;
-  }
-}
-@media (max-width: 750px) {
-    #blogtitle {
-        padding-top:90px;
-    }
 }
 
 #descriptionheader h3 {
   font-family: 'Lato', sans-serif;
-  font-size: 17.5px;
+  font-size: 23px;
   text-align: center;
-  font-weight: bold;
-  font-style: italic;
+  font-weight: 900;
   letter-spacing: 0px;
+  padding-bottom: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 #descriptionheader h3 a {
-    color: #9e9ea6;
+    color: #fff;
     text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+    #blogtitle h2 {
+        font-size: 56px;
+        line-height: 56px;
+        padding: 0 0 30px 0;
+    }
+    #descriptionheader h3 {
+        font-size: 21px;
+    }
+}
+
 #descriptionblog {
   position: absolute;
   margin-top: 260px;
@@ -556,103 +487,29 @@ h1 span {
     right: 30px
 }
 
-.navtop {
-  position: absolute;
-  top: 50px;
-  right: 20px;
-  height: 50px;
-}
-
-@media (max-width: 750px) {
-    .navtop {
-        position: static;
-    }
-}
-
-@media (min-width: 750px) and (max-width: 1150px) {
-    .navtop {
-        top: 43px;
-    }
-}
-
-.navigation {
-  padding-top: 0px;
-  text-align: right;
-}
-
-.navigation li {
-  list-style: none;
+a.btn-register {
   float:right;
-  padding: 3px 15px 0 15px;
+  margin-top: 19px;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.9px;
+  font-size: 14px;
   line-height: 18px;
   color: {color:Navigation Text Color};
-  letter-spacing: 0.2px;
   font-style: normal;
-  position: relative;
-  padding-top: 17px;
   font-weight: bold;
+  color: #777;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 750px) and (max-width: 950px) {
-    .navigation li {
-        float: none;
-        margin-bottom: 10px;
-    }
-    
-    .btn-faq {
-        margin-right:8px;
-    }
-}
-
-@media (max-width: 750px) {
-    .navigation {
-        padding-top: 30px;
-        text-align: center;
-    }
-    .navigation li {
-        float: none;
-        display: inline-block;
-    }
-}
-
-.navigation a {
-color: {color:Navigation Text Color};
-}
-
-.navigation a:hover {
-color: {color:LinkHover Color};
-}
-
-a.btn-register {
-  opacity: 0.9;
-  border-radius: 4px;
-  background: #402d3c;
-  height:40px;
-  padding: 12px 16px;
-  color: #fff;
-}
-
 a.btn-register:hover {
-    opacity: 1;
-}
-
-
-.navigation li:hover {
-
-  color: {color:LinkHover Color};
-
+    color: #333;
+    text-decoration: none;
 }
 
 /*=======MAIN BIT========*/
 
 .mainbit {
   background-color: {color:Content Background};
-  margin-top:10px;
   margin-bottom:60px;
 }
 article {
@@ -762,10 +619,6 @@ input p {
   font-weight: 400;
   font-style: normal;
 }
-
-
-
-
 
 
 /* ==== POST META ========== */
@@ -1159,20 +1012,6 @@ PXU Photoset Extended Styles
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* = = = = = = = = = = = = = = = = = iPhone Landscape */
 @media screen and (max-width: 650px) {
     
@@ -1345,22 +1184,20 @@ addthis_config.data_track_clickback = false;
    <!-- BASIC DETAILS -->
 
     <div class="thelargeheader">
-    
-       <h1>
-        <a href="https://www.fifthweek.com/">
-            <span id="logo-small">fw</span>
-            <span id="logo-large">fifthweek.</span>
-        </a>
-       </h1>
-        
-      {block:IfHeaderImage}<img id="bgheader" src="{image:Header}"/>{/block:IfHeaderImage}
+        <div class="thelargeheader-inner">
+           <h1>
+            <a href="https://www.fifthweek.com/">
+                <span id="logo-large">fifthweek.</span>
+            </a>
+           </h1>
+           
+           <a class="btn-register" href="https://www.fifthweek.com/">Go to fifthweek.com</a>
+        </div>
+    </div>
       
-      
+    <div class="thelargesubheader">
       <div id="blogtitle">
-      
-      
-         {block:IfNotHeaderLogoImage}<h2><a href="/">My other blog is premium</a></h2>{/block:IfNotHeaderLogoImage}
-         {block:IfHeaderLogoImage}<img src="{image:Header Logo}"/>{/block:IfHeaderLogoImage}
+         {block:IfNotHeaderLogoImage}<h2><a href="/">Our other blog is premium.</a></h2>{/block:IfNotHeaderLogoImage}
       </div>         
 
       <div id="descriptionheader">
@@ -1368,29 +1205,8 @@ addthis_config.data_track_clickback = false;
            <h3><a href="/">{text:About Section}</a></h3>
                    {/block:IfAboutSection}
       </div>
-
-
-  <div class="navtop">
-    
-      
-      <ul class="navigation">
-    
-            <li><a class="btn-register" href="https://www.fifthweek.com/">Go to fifthweek.com</a></li>
-               
-              {block:HasPages}  
-             {block:Pages}<li><a href="{URL}" id="extrapages" title="{Label}">{Label}</li></a>{/block:Pages}
-             {/block:HasPages}
-                  
-               
-        
-        
-      </ul>
-  
-  </div>
-  
-  
     </div>
-    
+  
 </header>
 
 
