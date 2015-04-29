@@ -68,7 +68,7 @@
     <meta name="text:Twitter Username" content=""/>
     <meta name="text:Facebook Profile" content=""/>
     <meta name="text:Pintrest Profile" content=""/>
-    <meta name="text:Disqus Code" content=""/>
+    <meta name="text:Disqus Shortname" content=""/>
     
     
     <!-- fonts -->
@@ -153,6 +153,8 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   display: block;
+  padding-top:10px;
+  margin: 0 auto 25px auto;
 }
 img,
 object,
@@ -199,6 +201,7 @@ h2 {
   color: {color:Text Color};
   font-weight: 900;
   font-style: normal;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -228,26 +231,28 @@ h6:hover {
   color: #9e9ea6;
 }
 blockquote {
-  font-size: 16px;
-  line-height: 32px;
-  font-family: {font:Body};
-  
-    color: {color:Text Color};
-  font-weight: 400;
+    border-left: 4px solid #593e54;
+    padding: 0 0 0 50px;
+    font-style: italic;
 }
-p {
+p, blockquote, .post-body li {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   line-height: 25.5px;
   font-weight: 400;
-  margin-bottom: 25px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+p, blockquote, .post-body li, .post-body ul {
+  margin-bottom: 16px;
+}
 @media (min-width: 765px) {
-    p {
+    p, blockquote, .post-body li {
         font-size: 20px;
         line-height: 32px;
+    }
+    p, blockquote, .post-body li, .post-body ul {
+      margin-bottom: 20px;
     }
 }
 a {
@@ -255,14 +260,14 @@ a {
   color: {color:Link Color};
 }
 a:hover {
-  color: {color:LinkHover Color};
+  text-decoration: underline;
+  color: {color:Link Hover Color};
 }
-li {
- font-family: 'Merriweather', sans-serif;
-  font-size: 16px;
-  line-height: 32px;
-  font-weight: normal;
-  font-style: normal;
+.post-body ul {
+  padding-left: 40px;
+}
+.post-body li {
+  margin-bottom: 0;
 }
 
 
@@ -448,13 +453,16 @@ h1 span {
   line-height: 40px;
   padding: 35px 0 20px;
   margin: 0 auto;
-  color: {color:Heading Text};
   font-weight: 900;
   font-style: normal;
   text-align: center;
   letter-spacing: -3px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#blogtitle h2 a {
+    color: {color:Heading Text};
+    text-decoration: none;
 }
 @media (min-width: 400px) {
     #blogtitle h2 {
@@ -482,10 +490,13 @@ h1 span {
   text-align: center;
   font-weight: bold;
   font-style: italic;
-  color: #9e9ea6;
   letter-spacing: 0px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#descriptionheader h3 a {
+    color: #9e9ea6;
+    text-decoration: none;
 }
 #descriptionblog {
   position: absolute;
@@ -574,12 +585,11 @@ h1 span {
   float:right;
   padding: 3px 15px 0 15px;
   font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.9px;
   line-height: 18px;
   color: {color:Navigation Text Color};
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0.2px;
   font-style: normal;
   position: relative;
   padding-top: 17px;
@@ -623,7 +633,7 @@ a.btn-register {
   border-radius: 4px;
   background: #402d3c;
   height:40px;
-  padding: 12px 20px;
+  padding: 12px 16px;
   color: #fff;
 }
 
@@ -640,18 +650,10 @@ a.btn-register:hover {
 
 /*=======MAIN BIT========*/
 
-.mainbitperma{
-position: relative;
-  top: 50px;
-  background-color: {color:Content Background};
-  padding-bottom: 160px;
-  z-index: 10;
-  
-}
-
 .mainbit {
   background-color: {color:Content Background};
   margin-top:10px;
+  margin-bottom:60px;
 }
 article {
   padding-top: 60px;
@@ -666,10 +668,13 @@ article {
 .theposttitle {
   margin: 20px 0 20px 0;
 }
+.post-body h2 {
+  padding: 10px 0 15px 0;
+}
 .caption {
   padding-top: 20px;
 }
-.post-body, .caption {
+.post-body, .post-body h2, .caption {
   color: #555549;
 }
 .quote-short {
@@ -764,30 +769,11 @@ input p {
 
 
 /* ==== POST META ========== */
-.permalink {
-  float: left;
-  display: block;
-  margin-right: 20px;
-}
-
-
-.permalink img{
-    opacity:0.7;
-}
-
-
-.permalink img:hover{
-    
-    opacity:1;
-    
-}
-
 
 .post-meta {
   position: relative;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 30px;
-  border-top: #e1e1e1 1px solid;
   padding: 25px 0 35px 0;
 }
 
@@ -807,6 +793,9 @@ input p {
       }
 
 
+.addthis_sharing_toolbox {
+    float:left;
+}
 
 .metaitemright {
   float: right;
@@ -820,6 +809,23 @@ input p {
   display: block;
  position:relative;
   margin-right: 30px;
+}
+
+.metaitemleft:last-child {
+    margin-right: 0;
+}
+
+.permalink {
+  float: right;
+  display: block;
+}
+
+.permalink img{
+    opacity:0.7;
+}
+
+.permalink img:hover{
+    opacity:1;
 }
 
 .linkicon{
@@ -853,15 +859,23 @@ input p {
     }
 
     
-    
-.tagged{
- height: 94px;   
- overflow:hidden;
+.tagged {
+ border-top: #e1e1e1 1px solid;
+ padding-top: 20px;
+ width: 100%;
+}
+.tagged ul{
+ list-style: none;
+}
+
+.tagged ul li{
+ display: inline-block;   
+ margin-right: 15px;
 }
     
 .topspace{
     margin-top: 3px;
-    margin-right: 15px;   
+    margin-right: 30px;   
 }
     
 .prev{
@@ -1209,19 +1223,17 @@ PXU Photoset Extended Styles
   
 }
 /* = = = = = = = = = = = = = = = = = Medium Screens */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 820px) {
   article {
     position: relative;
-    width: 800px;
-    left: 50%;
-    margin-left: -400px;
+    width: 662px;
+    margin: 0 auto;
   }
   
    .pagination {
     position: relative;
-    width: 800px;
-    left: 50%;
-    margin-left: -400px;
+    width: 662px;
+    margin: 0 auto;
   }
   
   
@@ -1317,7 +1329,14 @@ ol.notes a:hover {
 
 <body>
 
-     
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552655eb302cee7f" async="async"></script>
+
+<script type="text/javascript">
+var addthis_config = addthis_config||{};
+addthis_config.data_track_addressbar = false;
+addthis_config.data_track_clickback = false;
+</script> 
 <!-- Tumblr Theme #37034 -->
 
 
@@ -1325,7 +1344,6 @@ ol.notes a:hover {
 <header>
    <!-- BASIC DETAILS -->
 
-    {block:IndexPage}
     <div class="thelargeheader">
     
        <h1>
@@ -1341,13 +1359,13 @@ ol.notes a:hover {
       <div id="blogtitle">
       
       
-         {block:IfNotHeaderLogoImage}<h2>My other blog is premium</h2>{/block:IfNotHeaderLogoImage}
+         {block:IfNotHeaderLogoImage}<h2><a href="/">My other blog is premium</a></h2>{/block:IfNotHeaderLogoImage}
          {block:IfHeaderLogoImage}<img src="{image:Header Logo}"/>{/block:IfHeaderLogoImage}
       </div>         
 
       <div id="descriptionheader">
           {block:IfAboutSection}
-           <h3> {text:About Section}</h3>
+           <h3><a href="/">{text:About Section}</a></h3>
                    {/block:IfAboutSection}
       </div>
 
@@ -1357,8 +1375,7 @@ ol.notes a:hover {
       
       <ul class="navigation">
     
-            <li><a class="btn-register" href="https://www.fifthweek.com/">Register</a></li>
-                <li><a class="btn-faq" href="https://www.fifthweek.com/help/faq">Learn More</a></li>
+            <li><a class="btn-register" href="https://www.fifthweek.com/">Go to fifthweek.com</a></li>
                
               {block:HasPages}  
              {block:Pages}<li><a href="{URL}" id="extrapages" title="{Label}">{Label}</li></a>{/block:Pages}
@@ -1373,7 +1390,7 @@ ol.notes a:hover {
   
   
     </div>
-    {/block:IndexPage}
+    
 </header>
 
 
@@ -1562,29 +1579,19 @@ ol.notes a:hover {
 
 
                  {block:Date}
-                 <div class="permalink metaitemleft">
-                    <div class="metaitemleft topspace"> {LikeButton size="16"} </div>
-                   <div class="metaitemleft topspace" {ReblogButton size="16"}</div>
+                 <div class="addthis_sharing_toolbox" data-url="{ShortURL}" data-title="{Title}"></div>
+                 <div class="permalink">
+                    
+                    <div class="metaitemleft topspace"> {LikeButton size="20"} </div>
+                   <div class="metaitemleft topspace" {ReblogButton size="20"}</div>
                     
                     <a class="metaitemleft" href="{Permalink}"><h6> <img class="linkicon" src="http://static.tumblr.com/negrna7/LlFmggkn3/link.png" width= "25px !important" alt="linkicon" > {TimeAgo}</h6></a>
                  </div>
                  {/block:Date}
-                 
-                 
-                 
-                 
-                 
-                                 
- <div class="post-notess metaitemright">
-
- <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
-              
-         
-</div>
-                 
+          
                  {block:HasTags}
                  <div class="tagged metaitemleft">
-                    <h6>{lang:Tagged}:</h6> {block:Tags}<a href="{TagURL}"><h6>{Tag}</h6></a> {/block:Tags}
+                    <ul>{block:Tags}<li><a href="{TagURL}"><h6>#{Tag}</h6></a></li> {/block:Tags}</ul>
                  </div>
                  {/block:HasTags}
                  
@@ -1646,33 +1653,11 @@ ol.notes a:hover {
         </div>
 
 
-
-
-
-
-
-
-
         </article>  
 
 
 
-
-
      {/block:Posts}  
-
-
-    <article>
-    
-     {block:IfDisqusCode}
-   
-
-    {/block:IfDisqusCode}
-        
-    </article>
-    
-    
-    
     
 
 {block:Pagination}
@@ -1709,7 +1694,7 @@ ol.notes a:hover {
 
 
 {block:PermalinkPage}
-<section class="mainbitperma">
+<section class="mainbit">
 
 
 
@@ -1879,36 +1864,18 @@ ol.notes a:hover {
 
 
                  {block:Date}
-                 <div class="permalink metaitemleft">
+                 <div class="addthis_sharing_toolbox" data-url="{ShortURL}" data-title="{Title}"></div>
+                 <div class="permalink">
                    
                     <a class="metaitemleft" href="{Permalink}"><h6> <img class="linkicon" src="http://static.tumblr.com/negrna7/LlFmggkn3/link.png" width= "25px !important" alt="linkicon" > {TimeAgo}</h6></a>
                  </div>          
                  {/block:Date}
                  
-                 
-                 
-                 
-                 
-                                 
- <div class="post-notess metaitemright">
-
- <a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
-              
-         
-</div>         
-                 
                  {block:HasTags}
                  <div class="tagged metaitemleft">
-                    <h6>{lang:Tagged}:</h6> {block:Tags}<a href="{TagURL}"><h6>{Tag}</h6></a> {/block:Tags}
-                 </div>          
+                    <ul>{block:Tags}<li><a href="{TagURL}"><h6>#{Tag}</h6></a></li> {/block:Tags}</ul>
+                 </div>        
                  {/block:HasTags}
-                 
-                 
-                 
-                 
- 
-                 
-                 
                  
               
                  {block:NoteCount}
